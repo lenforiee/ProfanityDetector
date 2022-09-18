@@ -67,8 +67,8 @@ func TestRemoveList(t *testing.T) {
 	filter := profanitydetector.NewProfanityFilter()
 	filter.RemoveList([]string{"dickhead", "dickface"})
 
-	got := filter.IsProfanity("dickhead", false)
-	got2 := filter.IsProfanity("dickface", false)
+	got := filter.IsProfanity("dickhead")
+	got2 := filter.IsProfanity("dickface")
 	want := false
 	want2 := false
 
